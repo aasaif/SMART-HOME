@@ -1,3 +1,4 @@
+/*
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_home_applications/storage/color_storage.dart';
@@ -69,3 +70,4 @@ class UsageLowerPart extends StatelessWidget {
     );
   }
 }
+*/

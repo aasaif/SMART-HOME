@@ -11,7 +11,7 @@ class SecondListTile extends StatelessWidget {
       padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0, bottom: 5.0),
       child: Container(
         padding: EdgeInsets.all(10),
-        height: 210.h,
+        height: 205.h,
         width: 900.w,
         decoration: BoxDecoration(
           color: surface2,

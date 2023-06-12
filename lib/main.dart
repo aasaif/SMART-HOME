@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_home_applications/pages/practice.dart';
-import 'package:smart_home_applications/pages/usage_page.dart';
-import 'package:smart_home_applications/utils/fiChart.dart';
+import 'package:smart_home_applications/pages/powerusage_page.dart';
+import 'package:smart_home_applications/utils/google_bottom_navbar.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,7 +24,8 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: //const FiChartPage(),
+            home: //const GoogleNavBar(),
+                //const FiChartPage(),
                 const UsagePage(),
             //const Practice(),
             //const HomePage(),
