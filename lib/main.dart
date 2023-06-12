@@ -1,11 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:smart_home_applications/pages/diningroom_page.dart';
 import 'package:smart_home_applications/pages/home_page.dart';
-import 'package:smart_home_applications/pages/powerusage_page.dart';
-import 'package:smart_home_applications/pages/smarthome_page.dart';
-import 'package:smart_home_applications/utils/dropdown_button.dart';
-import 'package:smart_home_applications/utils/google_bottom_navbar.dart';
 import 'package:get/get.dart';
 
 void main() {
@@ -29,16 +24,7 @@ class MyApp extends StatelessWidget {
             theme: ThemeData(
               primarySwatch: Colors.blue,
             ),
-            home: //const DiningroomContainer2()
-                //const DiningRoomPage(),
-                //const SmartHomePage(),
-                //const MyHomePage(),
-                //const GoogleNavBar(),
-                //const FiChartPage(),
-                //const UsagePage(),
-                //const Practice(),
-                const HomePage(),
-            //CurvedContainer(),
+            home: const HomePage(),
           );
         });
   }

@@ -1,4 +1,3 @@
-import 'package:dropdown_button2/dropdown_button2.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smart_home_applications/storage/color_storage.dart';
@@ -13,7 +12,7 @@ class SmartHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: Container(
+        body: SizedBox(
           width: MediaQuery.of(context).size.width,
           height: MediaQuery.of(context).size.height,
           child: Stack(
@@ -72,7 +71,7 @@ class SmartHomePage extends StatelessWidget {
                     ),
                     SizedBox(height: 25.h),
                     //DROPDOWN MENU----------
-                    MyHomePage(),
+                    const MyHomePage(),
 
                     //--------------------------------------
                   ],
@@ -82,7 +81,7 @@ class SmartHomePage extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Container(
                   height: 1525.4.h,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF4D7480),
                   ),
                 ),
@@ -91,7 +90,7 @@ class SmartHomePage extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Container(
                   height: 1525.h,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: surface2,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(50),
@@ -137,7 +136,7 @@ class SmartHomePage extends StatelessWidget {
                       ),
 
                       //LIST TILE--------------------------
-                      FirstListTile(
+                      const FirstListTile(
                         deviceName: "Smart Lamp",
                         roomNameday: "Dining Room | Tue Thu",
                         offOnImage: 'icons/on.png',
@@ -145,7 +144,7 @@ class SmartHomePage extends StatelessWidget {
                         startTime: "8 pm",
                         endTime: "8 am",
                       ),
-                      FirstListTile(
+                      const FirstListTile(
                         deviceName: "Air Conditioner",
                         roomNameday: "Bed Room | Sun",
                         offOnImage: 'icons/off.png',
@@ -153,7 +152,7 @@ class SmartHomePage extends StatelessWidget {
                         startTime: "10 pm",
                         endTime: "11 am",
                       ),
-                      FirstListTile(
+                      const FirstListTile(
                         deviceName: "Smart Lamp",
                         roomNameday: "Bed Room 2 | Fri",
                         offOnImage: 'icons/off.png',
@@ -161,7 +160,7 @@ class SmartHomePage extends StatelessWidget {
                         startTime: "8 pm",
                         endTime: "8 am",
                       ),
-                      FirstListTile(
+                      const FirstListTile(
                         deviceName: "Television",
                         roomNameday: "Living Room | Tue Thu",
                         offOnImage: 'icons/on.png',
@@ -180,7 +179,7 @@ class SmartHomePage extends StatelessWidget {
         ),
         bottomNavigationBar: Container(
           color: surface2,
-          child: GoogleNavBar(),
+          child: const GoogleNavBar(),
         ),
       ),
     );
