@@ -24,20 +24,23 @@ class UsageUpperPart extends StatelessWidget {
                   fontWeight: FontWeight.w600,
                 ),
               ),
-              Container(
-                height: 90.h,
-                width: 90.w,
-                decoration: BoxDecoration(
-                  color: white,
-                  borderRadius: BorderRadius.all(
-                    Radius.circular(45.r),
+              InkWell(
+                onTap: () {},
+                child: Container(
+                  height: 90.h,
+                  width: 90.w,
+                  decoration: BoxDecoration(
+                    color: white,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(45.r),
+                    ),
                   ),
-                ),
-                child: Padding(
-                  padding: const EdgeInsets.all(9.0),
-                  child: Image.asset(
-                    'icons/filter.png',
-                    color: textColor,
+                  child: Padding(
+                    padding: const EdgeInsets.all(9.0),
+                    child: Image.asset(
+                      'icons/filter.png',
+                      color: textColor,
+                    ),
                   ),
                 ),
               ),

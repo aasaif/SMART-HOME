@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:smart_home_applications/pages/home_page.dart';
 import 'package:smart_home_applications/pages/powerusage_page.dart';
 import 'package:smart_home_applications/pages/smarthome_page.dart';
 import 'package:smart_home_applications/storage/color_storage.dart';
@@ -11,7 +12,7 @@ class GoogleNavBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: main2Color,
         borderRadius: BorderRadius.only(
           topLeft: Radius.circular(40),
@@ -29,26 +30,25 @@ class GoogleNavBar extends StatelessWidget {
           activeColor: main2Color,
           tabBackgroundColor: Colors.white,
           gap: 5,
-          onTabChange: (index) {
-            print(index);
-          },
-          padding: EdgeInsets.all(20),
+          //onTabChange: (index) {},
+          padding: const EdgeInsets.all(20),
           tabs: [
             GButton(
               icon: Icons.home_outlined,
               text: "Home",
+              onPressed: () => Get.to(() => const HomePage()),
             ),
             GButton(
               icon: Icons.hexagon_outlined,
               text: "Smart",
-              onPressed: () => Get.to(SmartHomePage()),
+              onPressed: () => Get.to(() => const SmartHomePage()),
             ),
             GButton(
               icon: Icons.incomplete_circle,
               text: "Usage",
-              onPressed: () => Get.to(UsagePage()),
+              onPressed: () => Get.to(() => const UsagePage()),
             ),
-            GButton(
+            const GButton(
               icon: Icons.account_circle_outlined,
               text: "Profile",
             ),

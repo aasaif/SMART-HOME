@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:get/get.dart';
+import 'package:smart_home_applications/pages/diningroom_page.dart';
 import 'package:smart_home_applications/storage/color_storage.dart';
 import 'package:smart_home_applications/utils/activeCard.dart';
 import 'package:smart_home_applications/utils/customCard.dart';
-import 'package:smart_home_applications/utils/customNavBar.dart';
 import 'package:smart_home_applications/utils/google_bottom_navbar.dart';
 import 'package:smart_home_applications/utils/roomsCard.dart';
 
@@ -67,18 +68,21 @@ class HomePage extends StatelessWidget {
                             ],
                           ),
                           //icon
-                          Container(
-                            height: 80.h,
-                            width: 80.w,
-                            decoration: BoxDecoration(
-                              color: white,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(40.r),
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              height: 80.h,
+                              width: 80.w,
+                              decoration: BoxDecoration(
+                                color: white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(40.r),
+                                ),
                               ),
-                            ),
-                            child: Image.asset(
-                              'icons/notifications.png',
-                              color: textColor,
+                              child: Image.asset(
+                                'icons/notifications.png',
+                                color: textColor,
+                              ),
                             ),
                           ),
                         ],
@@ -87,7 +91,7 @@ class HomePage extends StatelessWidget {
                     SizedBox(height: 28.h),
 
                     //Container
-                    CustomCard(),
+                    const CustomCard(),
                   ],
                 ),
               ),
@@ -95,7 +99,7 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Container(
                   height: 1084.5.h,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF4D7480),
                   ),
                 ),
@@ -104,7 +108,7 @@ class HomePage extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: Container(
                   height: 1084.6.h,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
                       topRight: Radius.circular(40),
@@ -127,12 +131,15 @@ class HomePage extends StatelessWidget {
                                 fontWeight: FontWeight.w600,
                               ),
                             ),
-                            Text(
-                              "See All",
-                              style: TextStyle(
-                                fontSize: 45.sp,
-                                color: main2Color,
-                                fontWeight: FontWeight.w600,
+                            InkWell(
+                              onTap: () {},
+                              child: Text(
+                                "See All",
+                                style: TextStyle(
+                                  fontSize: 45.sp,
+                                  color: main2Color,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ],
@@ -145,19 +152,25 @@ class HomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            RoomsCard(
-                              rcPercentageText: '19°c',
-                              rcImage: 'images/livingroom-1.png',
-                              rcNum: '5',
-                              rcBigText: "Living Room",
-                              rcSmallText: "devices",
+                            InkWell(
+                              onTap: () => Get.to(() => DiningRoomPage()),
+                              child: const RoomsCard(
+                                rcPercentageText: '19°c',
+                                rcImage: 'images/livingroom-1.png',
+                                rcNum: '5',
+                                rcBigText: "Living Room",
+                                rcSmallText: "devices",
+                              ),
                             ),
-                            RoomsCard(
-                              rcPercentageText: '12°c',
-                              rcImage: 'images/bedroom-1.png',
-                              rcNum: '8',
-                              rcBigText: "Bed Room",
-                              rcSmallText: "devices",
+                            InkWell(
+                              onTap: () {},
+                              child: const RoomsCard(
+                                rcPercentageText: '12°c',
+                                rcImage: 'images/bedroom-1.png',
+                                rcNum: '8',
+                                rcBigText: "Bed Room",
+                                rcSmallText: "devices",
+                              ),
                             ),
                           ],
                         ),
@@ -202,12 +215,15 @@ class HomePage extends StatelessWidget {
                                 ),
                               ],
                             ),
-                            Text(
-                              "See All",
-                              style: TextStyle(
-                                fontSize: 45.sp,
-                                color: main2Color,
-                                fontWeight: FontWeight.w600,
+                            InkWell(
+                              onTap: () {},
+                              child: Text(
+                                "See All",
+                                style: TextStyle(
+                                  fontSize: 45.sp,
+                                  color: main2Color,
+                                  fontWeight: FontWeight.w600,
+                                ),
                               ),
                             ),
                           ],
@@ -220,7 +236,7 @@ class HomePage extends StatelessWidget {
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
-                            ActiveCard(
+                            const ActiveCard(
                               acImage: 'images/air_conditioner.png',
                               acSmallText1: "Temperature",
                               acBigText1: "19°c",
@@ -228,7 +244,7 @@ class HomePage extends StatelessWidget {
                               acSmallText2: "Living room",
                             ),
                             SizedBox(width: 20.w),
-                            ActiveCard(
+                            const ActiveCard(
                               acImage: 'images/ceiling_lamp.png',
                               acSmallText1: "Colour",
                               acBigText1: "White",
@@ -241,12 +257,6 @@ class HomePage extends StatelessWidget {
 
                       SizedBox(height: 35.h),
 
-                      //nav bar-----------------------------
-                      /*Align(
-                        alignment: Alignment.bottomCenter,
-                        child: CustomNavBar(),
-                      ),
-                      */
                       //--------------------------------------
                     ],
                   ),
@@ -255,7 +265,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
-        bottomNavigationBar: GoogleNavBar(),
+        bottomNavigationBar: const GoogleNavBar(),
       ),
     );
   }

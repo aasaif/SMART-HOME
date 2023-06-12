@@ -1,11 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:smart_home_applications/storage/color_storage.dart';
-import 'package:smart_home_applications/utils/fiChart.dart';
 import 'package:smart_home_applications/utils/google_bottom_navbar.dart';
 import 'package:smart_home_applications/utils/secondListTile.dart';
-import 'package:smart_home_applications/utils/usage_lower_part.dart';
 import 'package:smart_home_applications/utils/usage_upper_part.dart';
 
 class UsagePage extends StatelessWidget {
@@ -15,33 +12,33 @@ class UsagePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
         body: SafeArea(
-          child: Container(
+          child: SizedBox(
             width: MediaQuery.of(context).size.width,
             height: MediaQuery.of(context).size.height,
             child: Stack(
               children: [
                 Container(
                   height: 845.h,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Colors.white,
                   ),
                 ),
                 Container(
                   height: 845.h,
-                  decoration: BoxDecoration(
+                  decoration: const BoxDecoration(
                     color: Color(0xFF4D7480),
                     borderRadius: BorderRadius.only(
                       bottomLeft: Radius.circular(50),
                     ),
                   ),
                   //-----------------------
-                  child: UsageUpperPart(),
+                  child: const UsageUpperPart(),
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     height: 1031.4.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Color(0xFF4D7480),
                     ),
                   ),
@@ -50,7 +47,7 @@ class UsagePage extends StatelessWidget {
                   alignment: Alignment.bottomCenter,
                   child: Container(
                     height: 1031.7.h,
-                    decoration: BoxDecoration(
+                    decoration: const BoxDecoration(
                       color: Colors.white,
                       borderRadius: BorderRadius.only(
                         topRight: Radius.circular(50),
@@ -96,12 +93,15 @@ class UsagePage extends StatelessWidget {
                                   ),
                                 ],
                               ),
-                              Text(
-                                "See All",
-                                style: TextStyle(
-                                  fontSize: 45.sp,
-                                  color: main2Color,
-                                  fontWeight: FontWeight.w600,
+                              InkWell(
+                                onTap: () {},
+                                child: Text(
+                                  "See All",
+                                  style: TextStyle(
+                                    fontSize: 45.sp,
+                                    color: main2Color,
+                                    fontWeight: FontWeight.w600,
+                                  ),
                                 ),
                               ),
                             ],
@@ -109,12 +109,44 @@ class UsagePage extends StatelessWidget {
                         ),
                         SizedBox(height: 15.h),
 
-                        Column(
+                        const Column(
                           children: [
-                            SecondListTile(),
-                            SecondListTile(),
-                            SecondListTile(),
-                            SecondListTile(),
+                            SecondListTile(
+                              deviceImage: "images/ac.png",
+                              deviceName: "Wireless Speaker",
+                              kwh: '1090',
+                              roomName: "Kitchen - Living Room",
+                              upDownImage: "icons/up.png",
+                              percentNum: "-100.2%",
+                              unitAndDate: "8 Unit | 12 Jam",
+                            ),
+                            SecondListTile(
+                              deviceImage: "images/ac.png",
+                              deviceName: "Wireless Speaker",
+                              kwh: '1090',
+                              roomName: "Kitchen - Living Room",
+                              upDownImage: "icons/up.png",
+                              percentNum: "-100.2%",
+                              unitAndDate: "8 Unit | 12 Jam",
+                            ),
+                            SecondListTile(
+                              deviceImage: "images/ac.png",
+                              deviceName: "Wireless Speaker",
+                              kwh: '1090',
+                              roomName: "Kitchen - Living Room",
+                              upDownImage: "icons/up.png",
+                              percentNum: "-100.2%",
+                              unitAndDate: "8 Unit | 12 Jam",
+                            ),
+                            SecondListTile(
+                              deviceImage: "images/ac.png",
+                              deviceName: "Wireless Speaker",
+                              kwh: '1090',
+                              roomName: "Kitchen - Living Room",
+                              upDownImage: "icons/up.png",
+                              percentNum: "-100.2%",
+                              unitAndDate: "8 Unit | 12 Jam",
+                            ),
                           ],
                         ),
                       ],
@@ -125,6 +157,6 @@ class UsagePage extends StatelessWidget {
             ),
           ),
         ),
-        bottomNavigationBar: GoogleNavBar());
+        bottomNavigationBar: const GoogleNavBar());
   }
 }

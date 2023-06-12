@@ -20,11 +20,11 @@ class SmartHomePage extends StatelessWidget {
             children: [
               Container(
                 height: 350.h,
-                decoration: BoxDecoration(color: surface2),
+                decoration: const BoxDecoration(color: surface2),
               ),
               Container(
                 height: 350.h,
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                   color: Color(0xFF4D7480),
                   borderRadius: BorderRadius.only(
                     bottomLeft: Radius.circular(50),
@@ -47,20 +47,23 @@ class SmartHomePage extends StatelessWidget {
                               fontWeight: FontWeight.w600,
                             ),
                           ),
-                          Container(
-                            height: 90.h,
-                            width: 90.w,
-                            decoration: BoxDecoration(
-                              color: white,
-                              borderRadius: BorderRadius.all(
-                                Radius.circular(45.r),
+                          InkWell(
+                            onTap: () {},
+                            child: Container(
+                              height: 90.h,
+                              width: 90.w,
+                              decoration: BoxDecoration(
+                                color: white,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(45.r),
+                                ),
                               ),
-                            ),
-                            child: Padding(
-                              padding: const EdgeInsets.all(9.0),
-                              child: Image.asset(
-                                'icons/filter.png',
-                                color: textColor,
+                              child: Padding(
+                                padding: const EdgeInsets.all(9.0),
+                                child: Image.asset(
+                                  'icons/filter.png',
+                                  color: textColor,
+                                ),
                               ),
                             ),
                           ),

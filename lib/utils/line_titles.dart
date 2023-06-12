@@ -1,5 +1,4 @@
 import 'package:fl_chart/fl_chart.dart';
-import 'package:flutter/material.dart';
 
 class LineTitles {
   static getTitleData() => const FlTitlesData(

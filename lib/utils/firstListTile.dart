@@ -24,10 +24,10 @@ class FirstListTile extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(left: 20.0, right: 20.0, top: 5.0, bottom: 5.0),
       child: Container(
-        padding: EdgeInsets.all(10),
+        padding: const EdgeInsets.all(10),
         height: 330.h,
         width: 900.w,
-        decoration: BoxDecoration(
+        decoration: const BoxDecoration(
           color: white,
           borderRadius: BorderRadius.all(Radius.circular(20)),
         ),
@@ -63,10 +63,13 @@ class FirstListTile extends StatelessWidget {
                   ),
 
                   //onoff image
-                  Image.asset(
-                    offOnImage,
-                    height: 80.h,
-                    width: 200.w,
+                  InkWell(
+                    onTap: () {},
+                    child: Image.asset(
+                      offOnImage,
+                      height: 80.h,
+                      width: 200.w,
+                    ),
                   ),
                 ],
               ),
@@ -78,7 +81,7 @@ class FirstListTile extends StatelessWidget {
               child: Row(
                 children: [
                   //light image
-                  Container(
+                  SizedBox(
                     height: 100.h,
                     width: 190.w,
                     child: Image.asset(
@@ -87,7 +90,7 @@ class FirstListTile extends StatelessWidget {
                   ),
 
                   //text
-                  Container(
+                  SizedBox(
                     width: 115.w,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -122,7 +125,7 @@ class FirstListTile extends StatelessWidget {
 
                   //text
                   SizedBox(width: 110.w),
-                  Container(
+                  SizedBox(
                     width: 110.w,
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.end,
@@ -159,36 +162,42 @@ class FirstListTile extends StatelessWidget {
                   Column(
                     children: [
                       //delete icon
-                      Container(
-                        height: 70.h,
-                        width: 70.w,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade100),
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: Image.asset(
-                            'icons/delete.png',
-                            color: Colors.black,
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: 70.h,
+                          width: 70.w,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade100),
+                            borderRadius: const BorderRadius.all(Radius.circular(5)),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Image.asset(
+                              'icons/delete.png',
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),
                       SizedBox(height: 20.h),
 
                       //edit icon
-                      Container(
-                        height: 70.h,
-                        width: 70.w,
-                        decoration: BoxDecoration(
-                          border: Border.all(color: Colors.grey.shade100),
-                          borderRadius: BorderRadius.all(Radius.circular(5)),
-                        ),
-                        child: Padding(
-                          padding: const EdgeInsets.all(4.0),
-                          child: Image.asset(
-                            'icons/edit.png',
-                            color: Colors.black,
+                      InkWell(
+                        onTap: () {},
+                        child: Container(
+                          height: 70.h,
+                          width: 70.w,
+                          decoration: BoxDecoration(
+                            border: Border.all(color: Colors.grey.shade100),
+                            borderRadius: const BorderRadius.all(Radius.circular(5)),
+                          ),
+                          child: Padding(
+                            padding: const EdgeInsets.all(4.0),
+                            child: Image.asset(
+                              'icons/edit.png',
+                              color: Colors.black,
+                            ),
                           ),
                         ),
                       ),
