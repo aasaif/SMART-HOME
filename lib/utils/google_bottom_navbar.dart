@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
+import 'package:smart_home_applications/pages/powerusage_page.dart';
+import 'package:smart_home_applications/pages/smarthome_page.dart';
 import 'package:smart_home_applications/storage/color_storage.dart';
 
 class GoogleNavBar extends StatelessWidget {
@@ -30,7 +33,7 @@ class GoogleNavBar extends StatelessWidget {
             print(index);
           },
           padding: EdgeInsets.all(20),
-          tabs: const [
+          tabs: [
             GButton(
               icon: Icons.home_outlined,
               text: "Home",
@@ -38,10 +41,12 @@ class GoogleNavBar extends StatelessWidget {
             GButton(
               icon: Icons.hexagon_outlined,
               text: "Smart",
+              onPressed: () => Get.to(SmartHomePage()),
             ),
             GButton(
               icon: Icons.incomplete_circle,
               text: "Usage",
+              onPressed: () => Get.to(UsagePage()),
             ),
             GButton(
               icon: Icons.account_circle_outlined,
