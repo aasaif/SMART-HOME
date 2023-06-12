@@ -23,11 +23,11 @@ class RoomsCard extends StatelessWidget {
         //backgroundColor: surface2,
         Container(
       width: 430.w,
-      height: 480.h,
+      height: 470.h,
       decoration: BoxDecoration(
         color: /*Colors.grey[300]*/ surface2,
         borderRadius: BorderRadius.all(Radius.circular(20)),
-        boxShadow: [
+        /*boxShadow: [
           BoxShadow(
             color: Colors.grey,
             offset: Offset(2.0, 2.0),
@@ -40,7 +40,7 @@ class RoomsCard extends StatelessWidget {
             blurRadius: 10.0,
             spreadRadius: 2,
           ),
-        ],
+        ],*/
       ),
       child: Padding(
         padding: const EdgeInsets.all(15.0),

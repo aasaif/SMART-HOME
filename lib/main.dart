@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:smart_home_applications/pages/home_page.dart';
 import 'package:smart_home_applications/pages/powerusage_page.dart';
+import 'package:smart_home_applications/pages/smarthome_page.dart';
+import 'package:smart_home_applications/utils/dropdown_button.dart';
 import 'package:smart_home_applications/utils/google_bottom_navbar.dart';
 
 void main() {
@@ -19,18 +22,20 @@ class MyApp extends StatelessWidget {
         splitScreenMode: true,
         builder: (context, child) {
           return MaterialApp(
-            title: 'Smart Home App',
-            debugShowCheckedModeBanner: false,
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
-            ),
-            home: //const GoogleNavBar(),
-                //const FiChartPage(),
-                const UsagePage(),
-            //const Practice(),
-            //const HomePage(),
-            //CurvedContainer(),
-          );
+              title: 'Smart Home App',
+              debugShowCheckedModeBanner: false,
+              theme: ThemeData(
+                primarySwatch: Colors.blue,
+              ),
+              home: const SmartHomePage()
+              //const MyHomePage()
+              //const GoogleNavBar(),
+              //const FiChartPage(),
+              //const UsagePage(),
+              //const Practice(),
+              //const HomePage(),
+              //CurvedContainer(),
+              );
         });
   }
 }

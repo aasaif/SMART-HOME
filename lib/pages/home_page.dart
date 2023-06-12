@@ -4,6 +4,7 @@ import 'package:smart_home_applications/storage/color_storage.dart';
 import 'package:smart_home_applications/utils/activeCard.dart';
 import 'package:smart_home_applications/utils/customCard.dart';
 import 'package:smart_home_applications/utils/customNavBar.dart';
+import 'package:smart_home_applications/utils/google_bottom_navbar.dart';
 import 'package:smart_home_applications/utils/roomsCard.dart';
 
 class HomePage extends StatelessWidget {
@@ -93,7 +94,7 @@ class HomePage extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                  height: 1310.8.h,
+                  height: 1084.5.h,
                   decoration: BoxDecoration(
                     color: Color(0xFF4D7480),
                   ),
@@ -102,7 +103,7 @@ class HomePage extends StatelessWidget {
               Align(
                 alignment: Alignment.bottomCenter,
                 child: Container(
-                  height: 1310.8.h,
+                  height: 1084.6.h,
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.only(
@@ -240,11 +241,13 @@ class HomePage extends StatelessWidget {
 
                       SizedBox(height: 35.h),
 
-                      //nav bar
-                      Align(
+                      //nav bar-----------------------------
+                      /*Align(
                         alignment: Alignment.bottomCenter,
                         child: CustomNavBar(),
                       ),
+                      */
+                      //--------------------------------------
                     ],
                   ),
                 ),
@@ -252,6 +255,7 @@ class HomePage extends StatelessWidget {
             ],
           ),
         ),
+        bottomNavigationBar: GoogleNavBar(),
       ),
     );
   }
