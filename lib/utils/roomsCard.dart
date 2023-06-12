@@ -24,23 +24,9 @@ class RoomsCard extends StatelessWidget {
         Container(
       width: 430.w,
       height: 470.h,
-      decoration: BoxDecoration(
-        color: /*Colors.grey[300]*/ surface2,
+      decoration: const BoxDecoration(
+        color: surface2,
         borderRadius: BorderRadius.all(Radius.circular(20)),
-        /*boxShadow: [
-          BoxShadow(
-            color: Colors.grey,
-            offset: Offset(2.0, 2.0),
-            blurRadius: 10.0,
-            spreadRadius: 2,
-          ),
-          BoxShadow(
-            color: Colors.white,
-            offset: Offset(-2.0, -2.0),
-            blurRadius: 10.0,
-            spreadRadius: 2,
-          ),
-        ],*/
       ),
       child: Padding(
         padding: const EdgeInsets.all(15.0),
@@ -71,7 +57,7 @@ class RoomsCard extends StatelessWidget {
               ],
             ),
             //image
-            Container(
+            SizedBox(
               height: 210.h,
               width: 230.w,
               child: Image.asset(rcImage),
@@ -101,7 +87,7 @@ class RoomsCard extends StatelessWidget {
                       rcNum,
                       style: TextStyle(
                         fontSize: 45.sp,
-                        color: Color(0xff404040),
+                        color: const Color(0xff404040),
                         fontWeight: FontWeight.w600,
                       ),
                     ),

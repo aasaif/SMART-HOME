@@ -37,7 +37,7 @@ class _FiChartPageState extends State<FiChartPage> {
               //drawHorizontalLine: true,
               show: true,
               getDrawingHorizontalLine: (value) {
-                return FlLine(
+                return const FlLine(
                   color: Colors.grey,
                   strokeWidth: 2,
                 );
@@ -58,7 +58,7 @@ class _FiChartPageState extends State<FiChartPage> {
                 isCurved: true,
                 barWidth: 3,
                 color: Colors.white,
-                dotData: FlDotData(
+                dotData: const FlDotData(
                     //show: false,
                     ),
               ),

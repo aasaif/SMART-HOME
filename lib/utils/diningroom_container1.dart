@@ -22,7 +22,7 @@ class DiningroomContainer1 extends StatelessWidget {
                 onTap: () => Get.back(),
                 child: Row(
                   children: [
-                    Icon(
+                    const Icon(
                       Icons.arrow_back_ios,
                       color: white,
                       size: 15,

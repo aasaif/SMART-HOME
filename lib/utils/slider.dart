@@ -13,7 +13,7 @@ class _CustomSliderState extends State<CustomSlider> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
+    return SizedBox(
       width: 300,
       child: Column(
         children: [
@@ -25,11 +25,13 @@ class _CustomSliderState extends State<CustomSlider> {
             //label: "hello",
             activeColor: Colors.white,
             inactiveColor: Colors.white,
-            thumbColor: Color(0xff9a7265),
+            thumbColor: const Color(0xff9a7265),
             onChanged: (value) {
-              setState(() {
-                _currentValue = value;
-              });
+              setState(
+                () {
+                  _currentValue = value;
+                },
+              );
             },
           ),
         ],

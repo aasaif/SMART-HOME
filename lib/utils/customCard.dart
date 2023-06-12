@@ -12,7 +12,7 @@ class CustomCard extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(left: 20.0, right: 20.0),
         child: Container(
-          padding: EdgeInsets.all(10),
+          padding: const EdgeInsets.all(10),
           height: 530.h,
           width: 900.w,
           decoration: BoxDecoration(
@@ -30,7 +30,7 @@ class CustomCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     //image
-                    Container(
+                    SizedBox(
                       height: 150.h,
                       width: 150.w,
                       child: Image.asset('images/cloudy-1.png'),
@@ -86,8 +86,8 @@ class CustomCard extends StatelessWidget {
               ),
               SizedBox(height: 20.h),
               //lower part
-              Padding(
-                padding: const EdgeInsets.all(10.0),
+              const Padding(
+                padding: EdgeInsets.all(10.0),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [

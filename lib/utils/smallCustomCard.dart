@@ -20,7 +20,7 @@ class SmallCustomCard extends StatelessWidget {
       height: 70,
       width: 100,
       decoration: BoxDecoration(
-        color: Color(0xFFe4ecef),
+        color: const Color(0xFFe4ecef),
         borderRadius: BorderRadius.all(
           Radius.circular(30.r),
         ),
@@ -37,11 +37,11 @@ class SmallCustomCard extends StatelessWidget {
                 Container(
                   height: 30,
                   width: 30,
-                  child: Image.asset(image),
                   decoration: BoxDecoration(
                     color: Colors.white,
                     borderRadius: BorderRadius.circular(40),
                   ),
+                  child: Image.asset(image),
                 ),
 
                 //text
@@ -51,11 +51,7 @@ class SmallCustomCard extends StatelessWidget {
                     fontSize: 40.sp,
                     color: textColor,
                     fontWeight: FontWeight.w800,
-
-                    //fontFamily: SF Pro Text,
-                    //fontStyle: Semibold,
                   ),
-                  //textAlign: TextAlign.start,
                 ),
               ],
             ),
@@ -66,11 +62,7 @@ class SmallCustomCard extends StatelessWidget {
                 fontSize: 40.sp,
                 color: textColor,
                 fontWeight: FontWeight.w400,
-
-                //fontFamily: SF Pro Text,
-                //fontStyle: Semibold,
               ),
-              //textAlign: TextAlign.start,
             ),
           ],
         ),

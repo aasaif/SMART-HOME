@@ -22,7 +22,7 @@ class ActiveCard extends StatelessWidget {
     return Container(
       width: 430.w,
       height: 340.h,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         color: main1,
         borderRadius: BorderRadius.all(
           Radius.circular(10),
@@ -36,7 +36,7 @@ class ActiveCard extends StatelessWidget {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                Container(
+                SizedBox(
                   height: 200.h,
                   width: 200.h,
                   //color: Colors.amber,
@@ -95,7 +95,7 @@ class ActiveCard extends StatelessWidget {
                     ),
                   ],
                 ),
-                Container(
+                SizedBox(
                   height: 80.h,
                   width: 140.h,
                   //color: white,
