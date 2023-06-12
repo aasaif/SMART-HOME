@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.smart_home_applications">
+    package="flutter.innovainfosys.saif">
    <application
         android:label="smart_home_applications"
         android:name="${applicationName}"

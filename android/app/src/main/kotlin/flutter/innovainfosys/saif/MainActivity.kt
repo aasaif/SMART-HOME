@@ -1,4 +1,4 @@
-package com.example.smart_home_applications
+package flutter.innovainfosys.saif
 
 import io.flutter.embedding.android.FlutterActivity
 
